@@ -1,19 +1,96 @@
 <!DOCTYPE html> <!-- indica al navegador que se trata de un archivo HTML-->
-<html lang="en">  <!-- indica que todo el contenido estará dentro de esta etiqueta-->
+<html lang="en"> <!-- indica que todo el contenido estará dentro de esta etiqueta y en lenguaje ingles, puede ser es para espanol, o it para italiano-->
+
     <head> <!-- Contiene informacion sobre el sitio como el titulo, caracteres, enlaces a los archivos CSS y JavaScript-->
-        <title>srlemusing</title> <!-- Define el titulo del sitio que aparece en la pestaña del navegador-->
-        <meta charset="UTF-8"> <!-- Es opcional y se usa para indicar la descripcion de la pagina-->
-        <meta name="viewport" content="=width=device-width, initial-scale=1.0">
-        <link> <!-- Se usa para enlazar archivoc CSS -->
+        <title>srlemusing.com</title> <!-- Define el titulo del sitio que aparece en la pestaña del navegador-->
+        <meta charset="UTF-8"> <!-- Es opcional y se usa para garantizar la lectura y visualizacion de caracteres especiales-->
+        <meta name="viewport" content="width=device-width, initial-scale=2.0"> <!--Es opcional y se usa para indicar que nuestro contenido se adapte al tamaño de la pantalla desde donde se visualice-->
+        <meta name="descripyion" content="es un una descripcion"> <!--Es opcional y se usa para dar una breve descripcion al contenido nuestro cuando apenas se busque en el buscados de google--> 
+        <meta http-equiv="X-UA-Compatible" content="ie=edge"> <!--Se usa para mejorar la compatibilidad de HMTL con el navegador Edge y que nuestro contenido sea visualizado con mejor experiencia en ese navegador-->
+        <link rel="stylesheet" href="./main.css"> <!-- Se usa para enlazar archivoc CSS -->
     </head>
 
     <body> <!-- Contiene todo el contenido visible del sitio como texto, imagen, video -->
-        <h1> Aprendiendo</h1> <!-- Desde h1 a h6 para titulos, encabezados o subtitulos-->
+        <h1> Ghael</h1> <!-- Desde h1 a h6 para titulos, encabezados, cabeceras o subtitulos. Debe existir minimo un h1, y desde h2 a h6 los que sean necesarios siempre conservando el orden-->
         <h2> prueba 0 </h2>
         <h3> prueba 1 </h3>
         <h4> prueba 2 </h4>
         <h5> prueba 3 </h5>
         <h6> prueba 4 </h6>
+
         <p> parrafo ejemplo </p> <!--contenido de informacion o parrafos de interes que pueden ir debajo de los titulos-->
+
+        <img src="" alt="imagen prueba"></img> <!--src es la etiqueta y su igualda es el atributo que sera el contenido o url de la imagen-->
+        <video src="" controls loop muted></video>
+        <audio src=""></audio>
+        <iframe src="" frameborder="0"></iframe>
+
+        <ol> <!--Ordenar lista en orden alfabetico o de forma enumerada-->
+            <li>elemento 1</li>
+            <li>elemento 2</li>
+        </ol>
+
+        <ul> <!--Ordenar lista con forma de viñeta-->
+            <li>elemento 3</li>
+            <li>elemento 4</li>
+        </ul>
+
+        <ul><li class="items"></li> <!--Agregar una lista automatica de viñetas del numero de elementos deseados, en este caso de 5 elementos:-->
+        <li class="items"></li>
+        <li class="items"></li>
+        <li class="items"></li>
+        <li class="items"></li></ul>
+
+
+        <section> </section> <!-- Agrupar contenido relacionado-->
+        <article> </article> <!--Para encerrar contenido independiente y autonomo: publicaciones de blogs, noticas, o foros-->
+        <anside> </anside> <!-- -->
+        <header> </header> <!--Envolver el emcabezado principal sel sitio: logotipo, titulo y navegacion-->
+        <footer> </footer> <!-- Rodear el pie de pagina del sitio web, incluye informacion de contacto, enlaces legales y demas-->
+        <nav> </nav> <!-- Para englobar elementos de navegacion: crear una barra de navegacion, Menú o enlaces de navegacion-->
+        <div> </div> <!-- etiqueta de bloque que se usa para agrupar otros elementos-->
+        <span> </span> <!-- etiqueta de linea que se usa para agrupar otros elementos-->
+        <form action=""></form> <!-- -->
+        <main> </main> <!--Rodear el contenido principal de la pagina excluyendo encabezados y pies de pagina-->
+
+        <table> <!--Se usa para agregar tablas con filas y columnas-->
+            <thead> <!--anunciamos el inicio de la tabla o cabecera-->
+                <tr> <!--Definimos las columnas-->
+                    <th>Columna 0</th> <!--agregamos las columnas que necesitemos-->
+                    <th>Columna 1</th>
+                </tr>
+            </thead> 
+            <tbody> <!--anunciamos que se agregara contenido a las columnas-->
+                <tr> <!--Aqui dentro de pondra el contenido-->
+                    <td>Contenido 0</td> <!-- agegamos contenido-->
+                    <td>Contenido 1</td>
+                </tr>
+            </tbody>
+            <tfoot>EjemploTABLA</tfoot> <!--Se usa para definir el pie de la pabla-->
+        </table>
+
+        <form action="" method=""> <!--comenzamos con el formulario y agregamos los atributos action y method-->
+            <fieldset> <!--para agrupar elementos dentro del formulario-->
+                <label for="nombre">Nombre</label> <!--Es una variable para obtener datos digitados por teclado-->
+                <input type="text" id="nombre"> <!--nos permite definir el tipo de datos de la variable Nombre y su contabilizados-->
+            </fieldset>
+
+            <select name="" id=""> <!--nos permite poner menu desplegable-->
+                <optgroup> <!--nos permite agrupar el meno desplegable-->
+                    <option value=""></option>
+                </optgroup>
+            </select>
+
+            <textarea name="" id="" cools="30" rows="130"></textarea> <!--espacio amplio como para agregar comentarios, mensajes o etiquetas-->
+            <button type="submit">Enviar</button> <!--Definimos el boton enviar y el type submit para limpiar form cuando se presione el boton-->
+        </form>
+
+        <nav> <!--Se usa para manejas hipervinculos o enlaces-->
+            <a href="http://google.com" target="_blank">Google</a> <!--Para enlaces externos a nuestro sitio, con arget="_blank" decimos que abra el enlace en una nueva pestaña y Google es el nombre del hipervinculo que le hemos dado-->
+            <a href="#id" target="_self"></a> <!--Para enlaces propios de nuestro sitio, target="_self" indicamos que es propio de nuestro sitio -->
+            <a href="index.html"></a>
+        </nav>
+
     </body>
+
 </html>
