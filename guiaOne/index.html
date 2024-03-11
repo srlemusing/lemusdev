@@ -56,11 +56,11 @@
             <li>elemento 4</li>
         </ul>
 
-        <ul><li class="items"></li> <!--Agregar una lista automatica de viñetas del numero de elementos deseados, en este caso de 5 elementos:-->
-        <li class="items"></li>
-        <li class="items"></li>
-        <li class="items"></li>
-        <li class="items"></li></ul>
+        <ul><li class="items">Familia</li> <!--Agregar una lista automatica de viñetas del numero de elementos deseados, en este caso de 5 elementos:-->
+        <li class="items">dirla</li>
+        <li class="items">michu</li>
+        <li class="items">adel</li>
+        <li class="items">mari</li></ul>
 
         <section> </section> <!-- Agrupar contenido relacionado-->
         <article> </article> <!--Para encerrar contenido independiente y autonomo: publicaciones de blogs, noticas, o foros-->
@@ -76,8 +76,8 @@
         <table> <!--Se usa para agregar tablas con filas y columnas-->
             <thead> <!--anunciamos el inicio de la tabla o cabecera-->
                 <tr> <!--Definimos las columnas-->
-                    <th>Columna 0</th> <!--agregamos las columnas que necesitemos-->
-                    <th>Columna 1</th>
+                    <th> colum 1</th> <!--agregamos las columnas que necesitemos-->
+                    <th> colum 2</th>
                 </tr>
             </thead> 
             <tbody> <!--anunciamos que se agregara contenido a las columnas-->
@@ -89,20 +89,20 @@
             <tfoot>EjemploTABLA</tfoot> <!--Se usa para definir el pie de la pabla-->
         </table>
 
-        <form action="" method=""> <!--comenzamos con el formulario y agregamos los atributos action y method-->
+        <form action="mipagina.hmtl" method="post"> <!--comenzamos con el formulario y agregamos los atributos action y method-->
             <fieldset> <!--para agrupar elementos dentro del formulario-->
-                <label for="nombre">Nombre</label> <!--Es una variable para obtener datos digitados por teclado-->
-                <input type="text" id="nombre"> <!--nos permite definir el tipo de datos de la variable Nombre y su contabilizados-->
-            </fieldset>
+                <label for="nombre">como te llamas?</label> <!--Es una variable para obtener datos digitados por teclado-->
+                <input type="nombre" name="nombre" id="nombre" required> <!--nos permite definir el tipo de datos de la variable Nombre y su contabilizados-->
+                <button type="submit"> enviar</button>
+            </fieldst>
 
             <select name="" id=""> <!--nos permite poner menu desplegable-->
-                <optgroup> <!--nos permite agrupar el meno desplegable-->
+                <optgroup> <!--nos permite agrupar elementos o lista desplegable-->
                     <option value=""></option>
                 </optgroup>
             </select>
 
             <textarea name="" id="" cools="30" rows="130"></textarea> <!--espacio amplio como para agregar comentarios, mensajes o etiquetas-->
-            <button type="submit">Enviar</button> <!--Definimos el boton enviar y el type submit para limpiar form cuando se presione el boton-->
         </form>
 
         <nav> <!--Se usa para manejar hipervinculos o enlaces-->
