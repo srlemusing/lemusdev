@@ -1,0 +1,56 @@
+body{
+    background: white;
+    margin: inherit;
+    padding: 3px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 12px;
+}
+
+#LogoSite{
+    display: flex;
+    width: 130px;
+    float: left;
+    height: 70px;
+}
+
+.LogoContent{
+    display: flexbox;
+    padding: 2px;
+    margin: 4px;
+}
+
+.MenuServicios{
+    list-style: none;
+    display: flex;
+    background-color: rgb(222, 186, 77);
+    border: 1px solid rgb(255, 255, 255);
+    text-transform: capitalize;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.MenuNav{ 
+    text-decoration: none;
+    border: 0px; 
+    padding: 5px 10; 
+    margin: 3px;
+    color: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer{
+    text-align: center;
+    background-color: #7f754d;
+    color: #ffffff;
+    padding: 2em 0;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 3px;
+}
+
+#HechoPor{
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    color: #ffffff;
+}

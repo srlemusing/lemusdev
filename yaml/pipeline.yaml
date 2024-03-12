@@ -1,0 +1,136 @@
+
+name: 1.0$(Rev:.r) #es el nombre que va a tener el pipeline, el dolar y la palabra reservada lo que hace es coger el nombre de la variable dentro de las variables de entonro de azure devops
+
+trigger: #Desencadenador que hace que mi pipeline se ejecute. Indica cuando se lanzara el pipeline si se ejecutan cambios por ejemplo en las ramas:
+  - development
+
+trigger: #aqui por ejemplo indicamos  que cuando se ejecute un cambio en estas ramas que ejecute, y cual rama excluir; importante la identacion
+  branches:
+    include:
+      - master
+      - development
+    excluder: #por ejemplo si quiere que se ejeucte cuando hayan cambios en las ramas incluidas, y no cuando hayan cambios en la rama en la excluida
+      - certiticacion #es un nombre cualquiera de rama que puse
+
+trigger: #Aca en este ejemplo se espera que se ejeucte el pipeline cuando hayan cambios en una rama feature basada en una rama principal: se debera especificar la ruta completa
+  branches:
+    include:
+      - features/*
+      paths:
+        include:
+          - webapp/** #aqui se refiere a cuando se haga un cambio en una ruta especifica, configuracion, etc ...
+
+
+variables: #definir variables 
+  name: variable1
+  otravariable: mundo
+
+pool: #es la imagen de agente uvm que bajamos del microsoft azure
+  vmImage: ubuntu-latest #es el nombre de la imagen que bajamos correspondiente al agente hospedado
+
+# Los Jobs son los trabajos a realizar, son tareas unitarias que se realizan en un solo agente con unas tareas en concreto
+
+jobs: #En plural se refiere a una coleccion de jobs. 
+  - job: saludar
+    steps:
+      - script: echo "$(otravariable)" #aqui estoy diciendo que al ejecutarse el job su resultado sera imprimir Hola mundo (este mundo es el valor de la variabe: otravariable)
+  - jobs: indicar cual es la primer variable
+    steps:
+      - script: echo "$(name)" #aqui me dira el valor que tiene la variable name que es la primera creada, con echo me muestra en pantalla
+
+jobs: #Aqui definimos un conjunto de jobs o trabajos, pueden haber N jobs cada uno con su tarea especifica
+  job: MyJob1 #es el nombre del job
+  displayName: Es mi primer job  #Es lo que saldra en pantalla sobre el pipeline
+  continueOnError: true #elegimos true o falso si queremos que se detenga ante un error
+  dependsOn: A #define las dependencias entre los jobs o trabajos del pipeline en general, ejemplo: linea 58
+  container: nombreDelContenedor #aplica en caso de tener contenedor que ejecute este job o trabajo
+  pool: nombreDelPool #lo definimos dentro de este job si queremos que este job tenga asociado un agente en concreto
+  workspace: #aqui podemos decidir que hacer ante la salida o finalizacion, por ejemplo:
+    clean: outputs #Se decide que limpie la pantalla al finalizar la ejecucion
+  steps: #Esos son los pasos que va a ejecutar le job
+    - script: echo Mi primer Job
+
+jobs: 
+- job: MyJob2 #nombre del job
+  steps: #los pasos que realizara el job
+  - script: echo 'job 2'
+
+- job: MyJob3
+  dependsOn: MyJob2 #Por ejemplo, la ejecucion de MyJob3 no se ejecuta hasta que no se ejecute el job MyJob2
+  steps:
+  - script: echo 'job 3'
+
+- job: MyJob4
+  dependsOn: MyJob2
+  steps:
+  - script: echo 'job 4'
+
+- job: MyJob5
+  dependsOn: 
+  - MyJob3
+  - MyJob4
+  steps:
+  - script: echo 'job 5'
+  
+- job: MyJob6
+  dependsOn:
+  - MyJob3
+  - MyJob5
+  steps:
+  - script: echo 'job 6'
+
+# Los stages son agrupados de trabajo, se ejecutan de forma secuencial y sirve para agrupar funcionalidades al pipeline si queremos que ejecute mas de una cosa al mismo tiempo#
+# Stages: Son como una etapa y representan una agrupacion de jobs que se ejecutan de forma secuencial.
+
+stages:   #en plural hace referencia a una coleccion de stage
+- stage: compilar #aqui se describen la primera etapa de la coleccion de stage tiene como funcion: compilar y tiene el job aninado
+ jobs:
+ - job: BuildJob #este es el primer job de la coleccion
+    steps: #indica el paso o sencuencia de este job a ejecutar
+    - script: echo compilando #es lo que ejecutara. Recordar que como es sencuencial, todo lo que este dentro del stages despende de cada stage y job asociado
+  
+- stage: probar
+  jobs:
+  - job: ProbarEnWindows
+    steps:
+      - script: echo probando en windows
+  - job: ProbarEnLinux
+    steps:
+    - script: echo probando en linux
+- stage: Deploy
+  jobs:
+    - job: deploy
+      steps:
+      - script: echo desplegando el codigo
+
+# Los steps son una forma lineal de ejecutar procesos dentro de los jobs, puede tener varios tipos de ejecucion: Script, bash, PowerShell, etc...
+
+    # stages: Son como una etapa y representan una agrupacion de jobs que se ejecutan de forma secuencial.
+    # jobs: trabajo
+    # steps: son los pasos dentro del trabajo
+    # task: hace referencia a una tarea, ejecucion de un bloque de codigo parametrizada que ejecutan una accion
+
+stages:   
+- stage: compilar 
+ jobs:
+ - job: BuildJob 
+    steps: 
+    - script: echo compilando 
+    - bash:
+      echo es un ejemplo de bash
+      echo es otro ejemplo de bash
+    - pwsh:
+      Write-Host "Es un ejemplo de powershell"
+      Es otro ejemplo de powershell
+
+ # task: hace referencia a una tarea, ejecucion de un bloque de codigo parametrizada que ejecutan una accion
+
+- stage: probar
+  jobs:
+  - job: ProbarEnWindows
+    steps:
+    - task: Installapp #por ejemplo indicar a la tarea que instala una aplicacion, puede ser restauras, capturar, etc..
+      displayName: Compilando
+      timeoutInMinutes: 120
+      inputs:
+      solution: '**\*.s1n'
