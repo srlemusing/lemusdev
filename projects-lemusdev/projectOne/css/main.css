@@ -20,25 +20,20 @@ body{
 
 .MenuServicios{
     list-style: none;
-    display: flex;
-    background-color: rgb(222, 186, 77);
-    border: 1px solid rgb(255, 255, 255);
-    text-transform:lowercase
     padding: 10px;
     font-size: 18px;
     gap: 45px;
+    display: flex;
+    text-transform:lowercase
+    background-color: rgb(222, 186, 77);
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .MenuNav{ 
     text-decoration: none;
-    border: 0px; 
     padding: 5px 10; 
     margin: 3px;
     color: black;
-}
-
-{
-    text-align: center;
 }
 
 footer{
@@ -66,8 +61,6 @@ footer{
     border: 10px;
     padding: 90px;
 }
-
-
 .h1{
     font-size: 100px;
     background-color: beige;
