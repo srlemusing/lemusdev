@@ -2,8 +2,7 @@ body{
     background: white;
     margin: inherit;
     padding: 3px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 #LogoSite{
@@ -24,9 +23,10 @@ body{
     display: flex;
     background-color: rgb(222, 186, 77);
     border: 1px solid rgb(255, 255, 255);
-    text-transform: capitalize;
+    text-transform:lowercase
     padding: 10px;
-    font-size: 15px;
+    font-size: 18px;
+    gap: 45px;
 }
 
 .MenuNav{ 
@@ -35,7 +35,10 @@ body{
     padding: 5px 10; 
     margin: 3px;
     color: black;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+{
+    text-align: center;
 }
 
 footer{
@@ -44,7 +47,7 @@ footer{
     color: #ffffff;
     padding: 2em 0;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 11px;
     margin: 3px;
 }
 
@@ -53,4 +56,22 @@ footer{
     list-style: none;
     text-decoration: none;
     color: #ffffff;
+}
+
+#describir{
+    font-size: 100px;
+    background-color: beige;
+    color: #7f754d;
+    margin: 80px;
+    border: 10px;
+    padding: 90px;
+}
+
+
+.h1{
+    font-size: 100px;
+    background-color: beige;
+    color: #7f754d;
+    border: 10px;
+    padding: 90px;
 }
