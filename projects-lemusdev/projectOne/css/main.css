@@ -25,8 +25,6 @@ body{
     gap: 45px;
     display: flex;
     text-transform:lowercase
-    background-color: rgb(222, 186, 77);
-    border: 1px solid rgb(255, 255, 255);
 }
 
 .MenuNav{ 
@@ -61,6 +59,7 @@ footer{
     border: 10px;
     padding: 90px;
 }
+
 .h1{
     font-size: 100px;
     background-color: beige;
