@@ -1,0 +1,98 @@
+/* es una fuente obtenida de google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{ /*Es la regla de la fuente obtenida, la seteamos en la etiqueta body*/
+    font-family: 'Poppins', sans-serif;
+    padding-left: 255px;
+    margin-left: calc(10% - 1px);
+    padding-top: 35px;
+}
+
+.container{
+    background: rgb(106 55 55);
+    color: ghostwhite;
+    width: 534px;
+    height: 610px;
+    border-radius: 23px;
+    padding-bottom: 14px;
+}
+
+.miphoto {
+    padding-left: 146px;
+    padding-top: 8px;
+    background: ghostwhite;
+    border-radius: 20px;
+}
+
+#ph{
+    width: 231px;
+    border-radius: 20px;
+}
+
+.informacion{
+    padding: 0px;
+    margin: auto;
+    display: table;
+    line-height: 2.5px;
+    text-align: center;
+    position: relative;
+}
+
+
+/* aqui empece hoy */
+
+p.perfil {
+    color: black;
+    font-size: 11px;
+    text-align: justify;
+    display: block;
+    font-weight: 300;
+    margin: 13px;
+    padding-inline: 70px;
+    padding-top: 39px;
+    background-color: ghostwhite;
+    padding: 3px 7px;
+    border-radius: 13px;
+}
+
+span {
+    color: #f7f7f7;
+    font-size: 14px;
+    text-align: center;
+    display: block;
+    font-weight: 600;
+    margin: 1px;
+}
+
+.socialmedia {
+    margin-top: 52px;
+    display: flex;
+    justify-content: flex-start;
+    gap: 15px;
+    width: 96px;
+    height: 32px;
+    padding-left: 225px;
+    padding-bottom: 6px;
+}
+
+#micontacto{
+    padding: 0px 0px;
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    transition: .4s cubic-bezier(0.7, -0.27, 0.03, 1.08);
+    text-align: center;
+    list-style: none;
+    text-decoration: none;
+    padding-left: 3px;
+    padding-right: 5px;
+    margin-left: 211px;
+    border-radius: 21px;
+    padding-bottom: 3px;
+}
+
+#micontacto:hover {
+    background: rgb(224, 94, 94);
+    color: white;
+    cursor: pointer;
+  }
