@@ -41,7 +41,7 @@ body{
 
 p.perfil {
     color: black;
-    font-size: 11px;
+    font-size: 12px;
     text-align: justify;
     display: block;
     font-weight: 300;
@@ -63,7 +63,7 @@ span {
 }
 
 .socialmedia {
-    margin-top: 52px;
+    margin-top: 26px;
     display: flex;
     justify-content: flex-start; /* nos ayuda a posicionar el contenido */
     gap: 15px; /* aplicamos gap para distanciar elementos comunes dentro del div */
@@ -71,7 +71,6 @@ span {
     height: 32px;
     padding-left: 225px;
     padding-bottom: 6px;
-
 }
 
 #micontacto{
@@ -81,7 +80,7 @@ span {
     text-align: center;
     list-style: none;
     text-decoration: none;
-    padding-left: 3px;
+    padding-left: 5px;
     padding-right: 5px;
     margin-left: 211px;
     border-radius: 21px;
@@ -91,5 +90,5 @@ span {
 #micontacto:hover { /* aplicamos para dar animacion usando el cambio del color inicial al elemento contacto */
     background: rgb(224, 94, 94);
     color: white;
-    cursor: pointer;
-  }
+    cursor: pointer; /* le doy un estilo al diseño del puntero */
+}
