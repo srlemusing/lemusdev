@@ -1,0 +1,67 @@
+
+body{
+    margin: 0px; /* quitamos el borde que se genera por defecto en el navegador */
+    background: #ebebed;
+}
+
+#registro{
+    background: #2196F3;
+    width: 375px; /* se define un ancho del div total */
+    height: 421px; /* se define el alto del div total */
+    position: absolute; /* se da una posicion absoluta */
+    margin-left: calc(50% - 187px); /* centramos le div usando los calculos, del 100% se toma el 50% y se le resta la mitad del ancho definido, 387 es la base del dispositivo mas o menos mas pequeño de ese modo la responsividad tiende a ser mejor*/
+    margin-top: 10%; /* no ayuda a seperar del eje superior */
+}
+#registro:hover{ /* Hover es el recurso que se dispara al pasar el mouse sobre el elemento */
+    background: #2196f3ad; /* hacemos que cambie de color */
+    transition: 0.5s;  /* hacemos que se reduzca el tamaño del texto */
+}
+
+#lblregistro{
+    width: 100%;  /* se define un ancho del div total */
+    text-align: center;  /* se centra el texto */
+    margin-top: 10px ; /* nos ayuda a seperar el texto del eje superior */
+    font-size: 23px; /* se define el tamano del texto */
+    font-style: italic; /* se define una tipografia */
+    font-weight: 700px; /* se da un poco de negrita a las letras */
+    border-radius: 9px; /* redondeamos un poco los bordes*/
+    color: white;
+}
+
+#btnregistro{
+    width: 80%; /* damos un ancho al div del boton*/
+    height: 35px;  /* damos una altura el div del boton */
+    padding-top: 12px;  /* no ayuda a seperar del eje superior */
+    background: #8BC34A;  /* definimos un color verde de fondo */
+    color: white;  /* damos color al texto */
+    text-align: center;  /* centramos el texto */
+    font-size: 20px; /* se define el tamano del texto */
+    font-style: italic; /* se define una tipografia */
+    font-weight: 700; /* se da un poco de negrita a las letras */
+    border-radius: 11px; /* redondeamos un poco los bordes*/
+    margin-left: 10%; /* corremos el elemento de izquiera a derecha para que nos quede centrado */
+    position: absolute; /* nos ayuda a ubicarlo mejor*/
+    bottom: 19px; /* nos atrriza el boto desde el eje superior hasta el inferior y ubicarlo mejor */
+    cursor: pointer; /* Le damos un estilo de dedo al cursor */
+    transition: 0.5s; /* Definimos una transicion de 0.5 segundos */
+}
+
+#btnregistro:hover{ /* Hover es el recurso que se dispara al pasar el mouse sobre el elemento */
+    background: #719f3bfa; /* hacemos que cambie de color */
+    font-size: 15px; /* hacemos que se reduzca el tamaño del texto */
+}
+
+.inputtextos{
+    width: 76%; /* definimos el ancho para que me queden todos organizados*/
+    height: 10px; /* definimos el alto */
+    margin-top: 8px;  /* nos ayuda a seperar el texto del eje superior */
+    margin-left: 10%; /* corremos el elemento de izquiera a derecha para que nos quede centrado */
+    border-radius: 9px; /*edondeamos un poco los bordes*/
+    border: none; /* quitamos el borde que se genera por defecto */
+    padding: 5px; /* para que entre el texto y el margen de los label haya un mejor espaciado*/
+    padding-left: 14px; /* para correr de izquierda a derecha el texto quedando un poco mas centrado*/
+    font-style: italic;
+    font-size: 10px;
+    background: whitesmoke;
+    color: black;
+}
