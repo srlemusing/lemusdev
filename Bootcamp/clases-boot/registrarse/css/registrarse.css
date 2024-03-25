@@ -49,6 +49,9 @@ body{
 #btnregistro:hover{ /* Hover es el recurso que se dispara al pasar el mouse sobre el elemento */
     background: #719f3bfa; /* hacemos que cambie de color */
     font-size: 15px; /* hacemos que se reduzca el tamaño del texto */
+    -webkit-box-shadow: -14px -8px 62px -6px rgba(123,219,195,0.78); /* son 3 lineas generadas con el generador de sobras */
+    -moz-box-shadow: -14px -8px 62px -6px rgba(123,219,195,0.78);
+    box-shadow: -14px -8px 62px -6px rgba(123,219,195,0.78);
 }
 
 .inputtextos{
