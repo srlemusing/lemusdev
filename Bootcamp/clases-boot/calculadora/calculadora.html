@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,24 +7,24 @@
     <link rel="stylesheet" href="./CSS/calculadora.css">
 </head>
 
-<header> calculadora </header>
+<header> calculadora </header> <!--Es la cabecera que le otorgo el contenido como una especie de titulo con el texto: calculadora-->
 
-<body>
-    <div id="idnumeros"> 
+<body> <!--Aqui abro mi primer div como contenedor-->
+    <div id="idnumeros"> <!--Es el div donde le brindo al usuario insertar los 2 datos que necesitamos para operar y a su vez le doy una pista del dato que se espera obtener-->
     <input type="text" id="numero1" placeholder="Ingresa el primer numero">
     <input type="text" id="numero2" placeholder="Ingresa el segundo numero">
     </div>
 
-    <div class="btnoperaciones">
+    <div class="btnoperaciones"> <!--Con esete div agrupamos o mapeamos las 4 operaciones basicas-->
     <div id="btnsumar" onclick="sumar()"> + </div>
     <div id="btnrestar" onclick="restar()"> - </div>
     <div id="btnmultiplicar" onclick="multiplicar()"> × </div>
     <div id="btndividir" onclick="dividir()"> ÷ </div>
     </div>
 
-    <script src="./JS/calculadora.js"> </script>
+    <script src="./JS/calculadora.js"> </script> <!--Aqui estamos seteando o enlazando mi archivo JavaScripts que contiene las funcionalidades respectivas para llevar a cabo la captura de datos-->
 
-    <footer>
+    <footer> <!--Es un pie de pagina que agrego con mi firma personal, haciendo uso del footer y aplicando lo aprendido-->
         ©️ 2024
          <a id="HechoPor" href="https://www.instagram.com/lemusdev/" target="_blank">lemusdev®</a> 
          FullStack Web Developer
